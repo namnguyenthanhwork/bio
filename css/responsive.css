@@ -1,0 +1,7 @@
+@import url(../css/grid.css);
+
+@media (max-width:991px) {}
+
+@media (min-width:768px) and (max-width:1199px) {}
+
+@media (max-width:767px) {}
