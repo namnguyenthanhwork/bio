@@ -1,20 +1,20 @@
-$(document).ready(function () {
-    // scroll back
-    $(window).scroll(function () {
-        // active & un active logo nav left
-        if (this.scrollY > 30) {
-            $(".logo img:first-child").addClass("un-active"),
-                $(".logo img:first-child").removeClass("active"),
-                $(".logo img:last-child").addClass("active"),
-                $(".logo img:last-child").removeClass("un-active");
-        } else {
-            $(".logo img:first-child").addClass("active"),
-                $(".logo img:first-child").removeClass("un-active"),
-                $(".logo img:last-child").addClass("un-active"),
-                $(".logo img:last-child").removeClass("active");
-        }
-    })
-});
+// $(document).ready(function () {
+//     // scroll back
+//     $(window).scroll(function () {
+//         // active & un active logo nav left
+//         if (this.scrollY > 30) {
+//             $(".logo img:first-child").addClass("un-active"),
+//                 $(".logo img:first-child").removeClass("active"),
+//                 $(".logo img:last-child").addClass("active"),
+//                 $(".logo img:last-child").removeClass("un-active");
+//         } else {
+//             $(".logo img:first-child").addClass("active"),
+//                 $(".logo img:first-child").removeClass("un-active"),
+//                 $(".logo img:last-child").addClass("un-active"),
+//                 $(".logo img:last-child").removeClass("active");
+//         }
+//     })
+// });
 
 // init cursor
 var cursors = [{
@@ -33,6 +33,24 @@ var cursors = [{
     blending_mode: "normal"
 }];
 
+/* ---------- homepage section ---------- */
+//typing name
+new Typed(".typing", {
+    strings: ["Thành Nam"],
+    typeSpeed: 80,
+    backSpeed: 60,
+    loop: !0
+});
+
+/* ---------- about section tabs ---------- */
+// typing name 
+new Typed(".typing-name", {
+    strings: ["Nguyễn Thành Nam"],
+    typeSpeed: 80,
+    backSpeed: 60,
+    loop: !0
+});
+// load real time
 function renderTime() {
     var e = new Date,
         t = new Date("2001-01-16"),
@@ -53,19 +71,10 @@ function renderTime() {
         p = document.getElementById("seconds");
     d.innerText = a, u.innerText = l, m.innerText = s, y.innerText = r, g.innerText = c, p.innerText = i, d.style.color = "#ed4747", u.style.color = "#ed4747", m.style.color = "#ed4747", y.style.color = "#0099ff", g.style.color = "#0099ff", p.style.color = "#0099ff", setTimeout("renderTime()", 1e3)
 }
-new Typed(".typing", {
-    strings: ["Thành Nam"],
-    typeSpeed: 80,
-    backSpeed: 60,
-    loop: !0
-});
-new Typed(".typing-name", {
-    strings: ["Nguyễn Thành Nam"],
-    typeSpeed: 80,
-    backSpeed: 60,
-    loop: !0
-});
-/* ---------- about section tabs ---------- */
+window.onload = (event) => {
+    renderTime();
+};
+// click about-tabs
 (() => {
     const aboutSection = document.querySelector(".about-section"),
         tabsContainer = document.querySelector(".about-tabs");
