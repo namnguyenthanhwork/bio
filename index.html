@@ -22,8 +22,7 @@
     <link rel="stylesheet" href="./css/responsive.css">
 </head>
 
-<body>
-
+<body onload="renderTime()">
     <!-- Header start -->
     <header class="header">
         <div class="container">
@@ -115,7 +114,7 @@
             <div class="row full-screen align-items-center">
                 <div class="home-text">
                     <p>Hello</p>
-                    <h2>I'm Thành Nam</h2>
+                    <h2>I'm <span class="typing"></span></h2>
                     <h1>Web Designer & Developer</h1>
                     <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
@@ -128,6 +127,235 @@
         </div>
     </section>
     <!-- Homepage section end -->
+
+    <!-- About section start -->
+    <section class="about-section section">
+        <div class="container">
+            <div class="row">
+                <div class="section-title">
+                    <h2 data-heading="main info">About Me</h2>
+                </div>
+            </div>
+            <div class="row">
+                <div class="about-img">
+                    <div class="img-box inner-shadow">
+                        <img src="./img/profile-avt.png" class="outer-shadow" alt="profile-avt">
+                    </div>
+                    <!-- Social link start -->
+                    <div class="social-links">
+                        <a href="#" class="outer-shadow hover-in-shadow" class="outer-shadow hover-in-shadow"><i
+                                class="fab fa-facebook-f"></i></a>
+                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-twitter"></i></a>
+                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-instagram"></i></a>
+                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fab fa-google"></i></a>
+                        <a href="#" class="outer-shadow hover-in-shadow"><i class="fas fa-link"></i></a>
+                    </div>
+                    <!-- Social link end -->
+                </div>
+                <div class="about-info">
+                    <div>
+                        <p>Full name: </p>
+                        <p class="typing-name"></p>
+                    </div>
+                    <div>
+                        <p>Date of birth: </p>
+                        <p>16-01-2001</p>
+                    </div>
+                    <div>
+                        <p>Age: </p>
+                        <p>
+                            <span id="years"></span><span class="paddingAge">years</span>
+                            <span id="months"></span><span class="paddingAge">months</span>
+                            <span id="days"></span><span class="paddingAge">days</span>
+                            <span id="hours"></span><span>h</span>
+                            <span id="minutes"></span><span>m</span>
+                            <span id="seconds"></span><span>s</span>
+                        </p>
+                    </div>
+                    <div>
+                        <p>Zodiac: </p>
+                        <p>Capricorn</p>
+                    </div>
+                    <div>
+                        <p>Studying at: </p>
+                        <p>Open University (OU HCMC)</p>
+                    </div>
+                    <div>
+                        <p>Major: </p>
+                        <p>Infomation Technology (IT)</p>
+                    </div>
+                    <div>
+                        <p>Class: </p>
+                        <p>DH19IT03 (K19 - IT93)</p>
+                    </div>
+                    <div>
+                        <p>In relationship: </p>
+                        <p>with <a href="https://www.facebook.com/thieuvu.tan.79" class="girl-friend">Kim Thi</a>
+                            (〃ﾟ3ﾟ〃)</p>
+                    </div>
+                    <div>
+                        <p>Hobby: </p>
+                        <p>Read comics, listen to music, watch films -
+                            youtube, road tripping, play badminton, flying planes, learning
+                            to code</p>
+                    </div>
+                    <div>
+                        <p>Email: </p>
+                        <p><span>namnguyenthanh.work</span><span>@gmail.com</span></p>
+                    </div>
+                    <div>
+                        <p>Living at: </p>
+                        <p>Ho Chi Minh City</p>
+                    </div>
+                    <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
+                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                </div>
+            </div>
+
+            <!-- About tabs start -->
+            <div class="row">
+                <div class="about-tabs">
+                    <span class="tab-item outer-shadow active" data-target=".skills">Skills</span>
+                    <span class="tab-item" data-target=".experience">Experience</span>
+                    <span class="tab-item" data-target=".education">Education</span>
+                </div>
+            </div>
+            <!-- About tabs end -->
+
+            <!-- Skills start -->
+            <div class="row">
+                <div class="tab-content active">
+                    <div class="row justify-content-center">
+                        <div class="skill-item col l-4 ml-6 m-6 sm-12 s-12">
+                            <p><span>Language:</span><span>HTML, CSS, JS, JAVA, C++</span></p>
+                            <p><span>Database:</span><span>My SQL, SQL</span></p>
+                            <p><span>Operating Systems:</span><span>Windows</span></p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Skills end -->
+
+            <!-- Experience start -->
+            <div class="row">
+                <div class="experience tab-content">
+                    <div class="row">
+                        <div class="timeline">
+                            <div class="row">
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-briefcase icon"></i>
+                                        <span>Sep, 2018 - present</span>
+                                        <h3>Job name</h3>
+                                        <h4>Company name, VietNam</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-briefcase icon"></i>
+                                        <span>Sep, 2018 - present</span>
+                                        <h3>Job name</h3>
+                                        <h4>Company name, VietNam</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-briefcase icon"></i>
+                                        <span>Sep, 2018 - present</span>
+                                        <h3>Job name</h3>
+                                        <h4>Company name, VietNam</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Experience end -->
+
+            <!-- Education start -->
+            <div class="row">
+                <div class="education tab-content">
+                    <div class="row">
+                        <div class="timeline">
+                            <div class="row">
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-graduation-cap icon"></i>
+                                        <span>2019 - present</span>
+                                        <h3>Studying Infomation Technology</h3>
+                                        <h4>Open University</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-graduation-cap icon"></i>
+                                        <span>2016 - 2019</span>
+                                        <h3>Student</h3>
+                                        <h4>Chơn Thành High school</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+
+                                <!-- Timeline item start -->
+                                <div class="timeline-item">
+                                    <div class="timeline-item-inner outer-shadow">
+                                        <i class="fas fa-graduation-cap icon"></i>
+                                        <span>2012 - 2016</span>
+                                        <h3>Student</h3>
+                                        <h4>Lương Thế Vinh Secondary school</h4>
+                                        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit quas
+                                            dicta ad ea doloremque ipsum voluptate dolorem doloribus, impedit quis eum?
+                                            Nisi temporibus consequuntur accusantium ab obcaecati repellat nesciunt
+                                            odio!</p>
+                                    </div>
+                                </div>
+                                <!-- Timeline item end -->
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- Education end -->
+        </div>
+    </section>
+    <!-- About section end -->
+
+
+
+
     <!-- All plugins -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
