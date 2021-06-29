@@ -14,6 +14,8 @@
     --bg-black-900: #000;
     --bg-black-100: #ddd;
     --bg-black-50: #eff0f4;
+    --bg-opacity: rgba(255, 255, 255, 0.5);
+
     --text-black-900: #000;
     --text-black-700: #555;
     --text-black-600: #666;
@@ -58,7 +60,7 @@ body {
     background-color: var(--bg-black-50);
 }
 
-body.stop-scrolling {
+body.hidden-scrolling {
     overflow-y: hidden;
 }
 
@@ -345,20 +347,23 @@ a {
 }
 
 .section-title {
-    padding: 0 15px;
     flex: 0 0 100%;
     max-width: 100%;
+
     text-align: center;
+
+    padding: 0 15px;
     margin-bottom: 60px;
 }
 
 .section-title h2 {
     display: inline-block;
+    margin: 0;
+
     font-size: 30px;
     font-weight: 700;
-    color: var(--text-black-900);
     text-transform: uppercase;
-    margin: 0;
+    color: var(--text-black-900);
 }
 
 .section-title h2::before {
@@ -402,6 +407,7 @@ a {
 
     width: 40px;
     height: 40px;
+
     cursor: pointer;
 
     border-radius: 50%;
@@ -512,6 +518,7 @@ a {
 
 .nav-menu-inner {
     min-height: 100vh;
+
     display: flex;
     align-items: center;
     justify-content: center;
@@ -596,12 +603,14 @@ a {
 .home-section .home-img {
     flex: 0 0 50%;
     max-width: 50%;
+
     padding: 0 15px;
 }
 
 .home-section .home-text p {
     margin: 0;
     color: var(--text-black-300);
+
     font-size: 18px;
     text-transform: capitalize;
 }
@@ -609,6 +618,7 @@ a {
 .home-section .home-text h2 {
     margin: 0;
     color: var(--text-black-900);
+
     font-size: 40px;
     font-weight: 700;
 }
@@ -661,14 +671,15 @@ a {
 }
 
 .about-section .about-img {
-
     flex: 0 0 40%;
     max-width: 40%;
+
     padding: 0 15px;
 }
 
 .about-section .about-img .img-box {
     padding: 15px;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -678,6 +689,7 @@ a {
 
 .about-section .about-img .img-box img {
     width: 100%;
+
     border: 10px solid transparent;
     border-radius: 10px;
     -webkit-border-radius: 10px;
@@ -772,17 +784,19 @@ a {
 
 /* about tabs */
 .about-section .about-tabs {
-    padding: 50px 15px 50px;
     flex: 0 0 100%;
     max-width: 100%;
+
+    padding: 50px 15px 50px;
     text-align: center;
 }
 
 .about-section .about-tabs .tab-item {
     display: inline-block;
-    margin: 0 5px 10px;
-    cursor: pointer;
     padding: 5px 20px;
+    margin: 0 5px 10px;
+
+    cursor: pointer;
 
     font-size: 16px;
     font-weight: 500;
@@ -820,6 +834,7 @@ a {
 .about-section .tab-content {
     flex: 0 0 100%;
     max-width: 100%;
+
     display: none;
 }
 
@@ -848,6 +863,7 @@ a {
 
 .about-section .timeline {
     position: relative;
+
     flex: 0 0 100%;
     max-width: 100%;
 }
@@ -866,6 +882,7 @@ a {
 .about-section .timeline .timeline-item {
     flex: 0 0 100%;
     max-width: 100%;
+
     padding: 0 15px;
 }
 
@@ -943,9 +960,9 @@ a {
 }
 
 .about-section .timeline .timeline-item-inner span {
-    color: var(--skin-color);
     display: block;
     margin: 0 0 10px;
+    color: var(--skin-color);
 }
 
 .about-section .timeline .timeline-item-inner h3 {
@@ -976,15 +993,20 @@ a {
 .service-section .service-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
+
     padding: 15px;
+
     display: flex;
     flex-wrap: wrap;
 }
 
 .service-section .service-item-inner {
-    padding: 50px 15px;
-    text-align: center;
     width: 100%;
+
+    padding: 50px 15px;
+
+    text-align: center;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1019,13 +1041,16 @@ a {
     position: absolute;
     top: 0;
     left: 0;
+
     width: 100%;
     height: 100%;
+
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1060,9 +1085,10 @@ a {
 .service-section .service-item-inner h3 {
     font-size: 20px;
     font-weight: 600;
-    color: var(--text-black-700);
-    margin: 0 0 10px;
     text-transform: capitalize;
+    color: var(--text-black-700);
+
+    margin: 0 0 10px;
 }
 
 .service-section .service-item-inner p {
@@ -1082,10 +1108,12 @@ a {
 }
 
 .portfolio-section .portfolio-filter {
-    padding: 0 15px;
     flex: 0 0 100%;
     max-width: 100%;
+
     text-align: center;
+
+    padding: 0 15px;
     margin-bottom: 20px;
 }
 
@@ -1093,10 +1121,13 @@ a {
     display: inline-block;
     margin: 0 5px 10px;
     padding: 5px 20px;
+
     cursor: pointer;
+
     text-align: center;
     text-transform: capitalize;
     font-weight: 500;
+
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
@@ -1123,7 +1154,9 @@ a {
 .portfolio-section .portfolio-item {
     flex: 0 0 33.33%;
     max-width: 33.33%;
+
     padding: 15px;
+
     display: flex;
     flex-wrap: wrap;
 }
@@ -1139,9 +1172,11 @@ a {
 }
 
 .portfolio-section .portfolio-item-inner {
-    padding: 15px;
-    cursor: pointer;
     width: 100%;
+    padding: 15px;
+
+    cursor: pointer;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1155,11 +1190,13 @@ a {
 
 .portfolio-section .portfolio-item-img img {
     width: 100%;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
     -ms-border-radius: 10px;
     -o-border-radius: 10px;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1179,16 +1216,20 @@ a {
     position: absolute;
     left: 0;
     bottom: -4px;
+    z-index: -1;
+
     text-transform: capitalize;
     font-weight: 500;
     color: var(--skin-color);
-    z-index: -1;
+
     opacity: 0;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
     -ms-transition: all 0.3s ease;
     -o-transition: all 0.3s ease;
+
     transform: translateY(-5px);
     -webkit-transform: translateY(-5px);
     -moz-transform: translateY(-5px);
@@ -1198,6 +1239,7 @@ a {
 
 .portfolio-section .portfolio-item-inner:hover .view-project {
     opacity: 1;
+
     transform: translateY(0);
     -webkit-transform: translateY(0);
     -moz-transform: translateY(0);
@@ -1221,13 +1263,22 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1000;
+
     width: 100%;
     height: 100%;
-    z-index: 1000;
+
     background-color: var(--bg-black-50);
     overflow-y: scroll;
+
     opacity: 0;
     visibility: hidden;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .portfolio-popup.open {
@@ -1239,26 +1290,62 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: 1005;
+
     width: 100%;
     height: 100%;
-    z-index: 1005;
-    background: var(--bg-black-50);
-    opacity: 0.5;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: var(--bg-opacity);
+
+    visibility: hidden;
+    opacity: 0;
+}
+
+.portfolio-popup .pp-loader.active {
+    visibility: visible;
+    opacity: 1;
 }
 
 .portfolio-popup .pp-loader div {
     width: 40px;
     height: 40px;
-    background: red;
+
+    border: 3px solid var(--skin-color);
+    border-left: 3px solid transparent;
+
+    border-radius: 50%;
+    -webkit-border-radius: 50%;
+    -moz-border-radius: 50%;
+    -ms-border-radius: 50%;
+    -o-border-radius: 50%;
+
+    animation: spin 1.5s linear infinite;
+    -webkit-animation: spin 1.5s linear infinite;
 }
 
 .portfolio-popup .pp-details {
     max-width: 1350px;
     width: calc(85% + 30px);
-    margin: auto;
     max-height: 0;
+
+    margin: auto;
+
     overflow: hidden;
     opacity: 0;
+
+    transition: all 0.3s ease-in-out;
+    -webkit-transition: all 0.3s ease-in-out;
+    -moz-transition: all 0.3s ease-in-out;
+    -ms-transition: all 0.3s ease-in-out;
+    -o-transition: all 0.3s ease-in-out;
+}
+
+.portfolio-popup .pp-details.active {
+    opacity: 1;
 }
 
 .portfolio-popup .pp-details .row {
@@ -1275,35 +1362,42 @@ a {
 
 .portfolio-popup .pp-title h2 {
     font-size: 28px;
-    color: var(--text-black-900);
-    text-transform: capitalize;
     font-weight: 600;
+    text-transform: capitalize;
+    color: var(--text-black-900);
+
     margin: 0 0 5px;
 }
 
 .portfolio-popup .pp-title p {
     font-size: 14px;
     font-weight: 600;
-    margin: 0 0 15px;
+
     border-bottom: 1px solid var(--bg-black-100);
+
+    margin: 0 0 15px;
     padding: 0 0 10px;
 }
 
 .portfolio-popup .pp-title p span {
     font-weight: 400;
+    text-transform: capitalize;
+    color: var(--skin-color);
 }
 
 .portfolio-popup .pp-project-details h3 {
     font-size: 20px;
     font-weight: 600;
-    margin: 0 0 15px;
-    color: var(--text-black-700);
     text-transform: capitalize;
+    color: var(--text-black-700);
+
+    margin: 0 0 15px;
 }
 
 .portfolio-popup .description {
     flex: 0 0 65%;
     max-width: 65%;
+
     padding: 0 15px;
 }
 
@@ -1314,12 +1408,14 @@ a {
 .portfolio-popup .info {
     flex: 0 0 35%;
     max-width: 35%;
+
     padding: 0 15px;
 }
 
 .portfolio-popup .info ul li {
     display: block;
     margin: 0 0 10px;
+
     font-weight: 600;
 }
 
@@ -1327,14 +1423,19 @@ a {
     font-weight: 400;
 }
 
+.portfolio-popup .info ul li a {
+    color: var(--skin-color);
+}
+
 .portfolio-popup .info ul li:last-child {
     margin-bottom: 0;
 }
 
 .portfolio-popup .separator {
-    height: 1px;
-    width: 100%;
     display: block;
+    width: 100%;
+    height: 1px;
+
     background: var(--bg-black-100);
 }
 
@@ -1342,7 +1443,9 @@ a {
     width: auto;
     height: auto;
     max-width: 100%;
+
     padding: 10px;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1354,33 +1457,40 @@ a {
     display: flex;
     align-items: center;
     justify-content: center;
+
     min-height: 100vh;
     max-width: 1350px;
     width: 85%;
+
     margin: auto;
 }
 
 .portfolio-popup .pp-main-inner {
-    padding: 70px 0 50px;
     position: relative;
+    padding: 70px 0 50px;
 }
 
 .portfolio-popup .pp-project-details-btn {
     position: absolute;
     left: 0;
     top: 15px;
+
     height: 40px;
     line-height: 40px;
-    font-size: 16px;
+
     cursor: pointer;
-    padding: 0 15px;
+    font-size: 16px;
     font-weight: 500;
     color: var(--skin-color);
+
+    padding: 0 15px;
+
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+
     transition: all 0.3s ease-in-out;
     -webkit-transition: all 0.3s ease-in-out;
     -moz-transition: all 0.3s ease-in-out;
@@ -1403,19 +1513,23 @@ a {
 .portfolio-popup .pp-close {
     position: absolute;
     right: 0;
+    top: 15px;
+
     width: 40px;
     height: 40px;
-    top: 15px;
+
+    cursor: pointer;
     text-align: center;
     font-size: 35px;
     line-height: 35px;
-    cursor: pointer;
     color: var(--text-black-600);
+
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1434,9 +1548,11 @@ a {
 .portfolio-popup .pp-counter {
     position: absolute;
     right: 0;
+    bottom: 5px;
+
     height: 40px;
     line-height: 40px;
-    bottom: 5px;
+
     color: var(--text-black-600);
 }
 
@@ -1445,14 +1561,18 @@ a {
 .portfolio-popup .pp-next {
     position: fixed;
     top: 50%;
+    z-index: 1010;
+
     width: 40px;
     height: 40px;
+
+    cursor: pointer;
     text-align: center;
     font-size: 20px;
-    cursor: pointer;
-    z-index: 1010;
     color: var(--text-black-900);
+
     opacity: 0.5;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;

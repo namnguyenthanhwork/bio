@@ -1,12 +1,12 @@
 @charset "UTF-8";
 
-/*!* WP Custom Cursors | WordPress Cursor Plugin
+/* WP Custom Cursors | WordPress Cursor Plugin
 * Author: Web_Trendy
 * Copyright 2019 © Web_Trendy (https://codecanyon.net/user/web_trendy)
 * Licensed under Envato (https://codecanyon.net/licenses/standard)
 *
 * "Open your hands if you want to be held." -Rumi
-**/
+*/
 .cursor-element {
     cursor: var(--default-cursor)
 }

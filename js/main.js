@@ -20,7 +20,7 @@
 var cursors = [{
     cursor_id: "3",
     cursor_type: "0",
-    cursor_shape: "11",
+    cursor_shape: "12",
     cursor_image: "",
     default_cursor: "auto",
     hover_effect: "plugin",
@@ -33,7 +33,7 @@ var cursors = [{
     blending_mode: "normal"
 }];
 
-/* ---------- homepage section ---------- */
+/* ---------------- homepage section ------------------- */
 //typing name
 new Typed(".typing", {
     strings: ["Thành Nam"],
@@ -42,7 +42,7 @@ new Typed(".typing", {
     loop: !0
 });
 
-/* ---------- about section tabs ---------- */
+/* ------------------- about section tabs ---------------- */
 // typing name 
 new Typed(".typing-name", {
     strings: ["Nguyễn Thành Nam"],
@@ -74,6 +74,7 @@ function renderTime() {
 window.onload = (event) => {
     renderTime();
 };
+
 // click about-tabs
 (() => {
     const aboutSection = document.querySelector(".about-section"),
@@ -93,13 +94,13 @@ window.onload = (event) => {
             // active new 'tab-content'
             aboutSection.querySelector(target).classList.add("active");
         }
-    })
+    });
 })();
 
 function bodyScrollingToggle() {
-    document.body.classList.toggle("stop-scrolling");
+    document.body.classList.toggle("hidden-scrolling");
 }
-/* ----------- portfolio filter and popup ------------ */
+/* ------------------------ portfolio filter and popup ------------------------ */
 (() => {
     const filterContainer = document.querySelector(".portfolio-filter"),
         portfolioItemsContainer = document.querySelector(".portfolio-items"),
@@ -132,7 +133,7 @@ function bodyScrollingToggle() {
                 }
             })
         }
-    })
+    });
 
     portfolioItemsContainer.addEventListener("click", (event) => {
         if (event.target.closest(".portfolio-item-inner")) {
@@ -143,22 +144,101 @@ function bodyScrollingToggle() {
             // convert screenshots into array
             screenshots = screenshots.split(",");
             slideIndex = 0;
+            // hide btn prev & next if screenshots = 1
+            if (screenshots.length === 1) {
+                prevBtn.style.display = "none";
+                nextBtn.style.display = "none";
+            } else {
+                prevBtn.style.display = "block";
+                nextBtn.style.display = "block";
+            }
+
             popupToggle();
             popupSlideShow();
+            popupDetails();
         }
-    })
+    });
 
-    closeBtn.addEventListener("click", ()=> {
+    closeBtn.addEventListener("click", () => {
         popupToggle();
-    })
+        // turn off popup details
+        if (projectDetailsContainer.classList.contains("active"))
+            popupDetailsToggle();
+    });
+
     function popupToggle() {
         popup.classList.toggle("open");
         bodyScrollingToggle();
     }
-    function popupSlideShow(){
-       const imgSrc = screenshots[slideIndex];
-       const popupImg = popup.querySelector(".pp-img");
-       // activate loader until the popupImg loaded
-       popupImg.src= imgSrc;
+
+    function popupSlideShow() {
+        const imgSrc = screenshots[slideIndex];
+        const popupImg = popup.querySelector(".pp-img");
+        // activate loader until the popupImg loaded
+        popup.querySelector(".pp-loader").classList.add("active");
+        popupImg.src = imgSrc;
+        popupImg.onload = () => {
+            // deactivate loader after the popupImg loaded
+            popup.querySelector(".pp-loader").classList.remove("active");
+        }
+        popup.querySelector(".pp-counter").innerHTML = (slideIndex + 1) + " of " + screenshots.length;
+    }
+
+    // next slide
+    nextBtn.addEventListener("click", () => {
+        if (slideIndex === screenshots.length - 1)
+            slideIndex = 0;
+        else
+            slideIndex++;
+        popupSlideShow();
+    });
+
+    //prev slide 
+    prevBtn.addEventListener("click", () => {
+        if (slideIndex === 0)
+            slideIndex = screenshots.length - 1;
+        else
+            slideIndex--;
+        popupSlideShow();
+    });
+
+    function popupDetails() {
+        // if portfolio-item-details not exists
+        if (!portfolioItems[itemIndex].querySelector(".portfolio-item-details")) {
+            projectDetailsBtn.style.display = "none";
+            return; // end function execution
+        }
+        projectDetailsBtn.style.display = "block";
+        // get the project details 
+        const details = portfolioItems[itemIndex].querySelector(".portfolio-item-details").innerHTML;
+        // set the project details
+        popup.querySelector(".pp-project-details").innerHTML = details;
+        // get the project title
+        const title = portfolioItems[itemIndex].querySelector(".portfolio-item-title").innerHTML;
+        // set the project title
+        popup.querySelector(".pp-title h2").innerHTML = title;
+        // get the project category
+        const category = portfolioItems[itemIndex].getAttribute("data-category");
+        // set thr project category
+        popup.querySelector(".pp-project-category").innerHTML = category.split("-").join(" ");
+    }
+
+    projectDetailsBtn.addEventListener("click", () => {
+        popupDetailsToggle();
+    });
+
+    function popupDetailsToggle() {
+        if (projectDetailsContainer.classList.contains("active")) {
+            projectDetailsBtn.querySelector("i").classList.remove("fa-times");
+            projectDetailsBtn.querySelector("i").classList.add("fa-plus");
+            projectDetailsContainer.classList.remove("active");
+            projectDetailsContainer.style.maxHeight = 0 + "px";
+        } else {
+            projectDetailsBtn.querySelector("i").classList.remove("fa-plus");
+            projectDetailsBtn.querySelector("i").classList.add("fa-times");
+            projectDetailsContainer.classList.add("active");
+            projectDetailsContainer.style.maxHeight = projectDetailsContainer.scrollHeight + "px";
+            popup.scrollTo(0, projectDetailsContainer.offsetTop);
+        }
     }
 })();
