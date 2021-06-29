@@ -6,6 +6,8 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Thành Nam Bio</title>
+    <link rel="shortcut icon" href="img/favicon.ico" />
+
     <!-- Reset CSS -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css"
         integrity="sha512-NhSC1YmyruXifcj/KFRWoC561YpHpc5Jtzgvbuzx5VozKpWvQ+4nXhPdFgmx8xqexRcpAglTj9sIBWINXa8x5w=="
@@ -16,12 +18,24 @@
         integrity="sha512-HK5fgLBL+xu6dm/Ii3z4xhlSUyZgTT9tuc/hSrtw6uzJOvgRr2a9jyxxT1ely+B+xFAmJKVSTbpM/CuL7qxO8w=="
         crossorigin="anonymous" />
 
-    <!-- Main CSS -->
-    <link rel="shortcut icon" href="img/favicon.ico" />
+    <!-- Lib CSS -->
     <link rel="stylesheet" href="./css/cursor.css">
+
+    <!-- Main CSS -->
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/responsive.css">
+
+    <!-- Default skin color -->
+    <link rel="stylesheet" href="./css/skins/color-1.css">
+    <!-- Switcher skin color -->
+    <link rel="stylesheet" class="alternate-style" title="color-1" href="./css/skins/color-1.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-2" href="./css/skins/color-2.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-3" href="./css/skins/color-3.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-4" href="./css/skins/color-4.css" disabled>
+    <link rel="stylesheet" class="alternate-style" title="color-5" href="./css/skins/color-5.css" disabled>
+
+    <link rel="stylesheet" href="./css/style-switcher.css">
 </head>
 
 <body>
@@ -48,21 +62,23 @@
         <div class="close-nav-menu outer-shadow hover-in-shadow">&times;</div>
         <div class="nav-menu-inner">
             <ul>
-                <li><a href="#" class="inner-shadow active">Home</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">About Me</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Services</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Portfolio</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Testimonial</a></li>
-                <li><a href="#" class="outer-shadow hover-in-shadow">Contact</a></li>
+                <li><a href="#home" class="link-item inner-shadow active">Home</a></li>
+                <li><a href="#about" class="link-item outer-shadow hover-in-shadow">About Me</a></li>
+                <li><a href="#services" class="link-item outer-shadow hover-in-shadow">Services</a></li>
+                <li><a href="#portfolio" class="link-item outer-shadow hover-in-shadow">Portfolio</a></li>
+                <li><a href="#testimonial" class="link-item outer-shadow hover-in-shadow">Testimonial</a></li>
+                <li><a href="#contact" class="link-item outer-shadow hover-in-shadow">Contact</a></li>
             </ul>
         </div>
         <!-- copyright text -->
         <p class="copyright-text">Copyright &copy; 2021 Thành Nam</p>
     </nav>
+    <!-- Fade out effect overlay -->
+    <div class="fade-out-effect"></div>
     <!-- Navigation menu end -->
 
     <!-- Homepage section start -->
-    <section class="home-section section">
+    <section class="home-section section active" id="home">
         <!-- Effect wrap start -->
         <div class="effect-wrap">
             <div class="effect effect-1"></div>
@@ -121,7 +137,7 @@
                     <p>Hello</p>
                     <h2>I'm <span class="typing"></span></h2>
                     <h1>Web Designer & Developer</h1>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">More About Me</a>
+                    <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
                 <div class="home-img">
                     <div class="img-box inner-shadow">
@@ -134,7 +150,7 @@
     <!-- Homepage section end -->
 
     <!-- About section start -->
-    <section class="about-section section">
+    <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -218,7 +234,7 @@
                         <p>Ho Chi Minh City</p>
                     </div>
                     <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#" class="btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
                 </div>
                 <!-- About info end -->
             </div>
@@ -365,7 +381,7 @@
     <!-- About section end -->
 
     <!-- Services section start -->
-    <section class="service-section section">
+    <section class="service-section section" id="services">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -462,7 +478,7 @@
     <!-- Services section end -->
 
     <!-- Portfolio section start -->
-    <section class="portfolio-section section">
+    <section class="portfolio-section section" id="portfolio">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -805,7 +821,7 @@
     <!-- Portfolio popup end -->
 
     <!-- Testimonial section start -->
-    <section class="testimonial-section section">
+    <section class="testimonial-section section" id="testimonial">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -866,7 +882,7 @@
     <!-- Testimonial section end -->
 
     <!-- Contact section start -->
-    <section class="contact-section section">
+    <section class="contact-section section" id="contact">
         <div class="container">
             <div class="row">
                 <div class="section-title">
@@ -938,13 +954,34 @@
     </section>
     <!-- Contact section end -->
 
+    <!-- Switch light-dark mode start -->
+    <div class="style-switcher outer-shadow">
+        <div class="style-switcher-toggler s-icon outer-shadow hover-in-shadow">
+            <i class="fas fa-cog fa-spin"></i>
+        </div>
+        <div class="day-night s-icon outer-shadow hover-in-shadow">
+            <i class="fas fa-moon"></i>
+        </div>
+
+        <h4>Theme Colors</h4>
+        <div class="colors">
+            <span class="color-1" onclick="setActiveStyle('color-1')"></span>
+            <span class="color-2" onclick="setActiveStyle('color-2')"></span>
+            <span class="color-3" onclick="setActiveStyle('color-3')"></span>
+            <span class="color-4" onclick="setActiveStyle('color-4')"></span>
+            <span class="color-5" onclick="setActiveStyle('color-5')"></span>
+        </div>
+    </div>
+    <!-- Switch light-dark mode end -->
+
     <!-- All plugins -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
-    <!-- <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script> -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>
-    <!-- Main JS -->
     <script src="./js/cursor.js"></script>
+    <!-- Main JS -->
     <script src="js/main.js"></script>
+    <!-- Switch light-dark mode -->
+    <script src="./js/switcher.js"></script>
 </body>
 
 </html>
