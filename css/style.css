@@ -110,6 +110,7 @@ a {
     position: absolute;
     left: 0;
     top: 0;
+    z-index: -1;
 
     width: 100%;
     height: 100%;
@@ -132,6 +133,7 @@ a {
 .btn-1 {
     display: inline-block;
     padding: 10px 25px;
+    border: none;
 
     font-weight: 500;
     cursor: pointer;
@@ -1794,4 +1796,108 @@ a {
 
 .testimonial-section .testi-slider-nav span i {
     line-height: 40px;
+}
+
+/* ----------------
+    Contact style 
+-------------------*/
+.contact-section {
+    padding: 80px;
+    min-height: 100vh;
+}
+
+.contact-section .contact-item {
+    flex: 0 0 33.33%;
+    max-width: 33.33%;
+    padding: 15px;
+    display: flex;
+}
+
+.contact-section .contact-item-inner {
+    width: 100%;
+    padding: 30px 15px;
+    text-align: center;
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+}
+
+.contact-section .contact-item-inner i {
+    font-size: 25px;
+    color: var(--skin-color);
+}
+
+.contact-section .contact-item-inner span {
+    display: block;
+    font-weight: 600;
+    color: var(--text-black-700);
+    margin: 15px 0 10px;
+    text-transform: capitalize;
+}
+
+.contact-section .contact-item-inner p {
+    line-height: 26px;
+    word-break: break-all;
+}
+
+.contact-section .contact-form {
+    flex: 0 0 100%;
+    max-width: 100%;
+    margin: 50px 0 0;
+}
+
+.contact-section .col {
+    padding: 0 15px;
+}
+
+.contact-section .input-group {
+    margin: 0 0 25px;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.contact-section .input-group::after {
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.contact-section .input-group .input-control {
+    display: block;
+    height: 45px;
+    width: 100%;
+    padding: 0 20px;
+    color: var(--text-black-700);
+    border: none;
+    outline: none;
+    background: transparent;
+    border-radius: 30px;
+    -webkit-border-radius: 30px;
+    -moz-border-radius: 30px;
+    -ms-border-radius: 30px;
+    -o-border-radius: 30px;
+}
+
+.contact-section .input-group textarea.input-control {
+    height: 180px;
+    padding: 20px;
+}
+
+.contact-section .submit-btn {
+    flex: 0 0 100%;
+    max-width: 100%;
+    text-align: center;
+
 }
