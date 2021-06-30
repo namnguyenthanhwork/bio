@@ -5,11 +5,9 @@
 
 /* define custom css variables */
 :root {
-    --skin-color: #fb839e;
-
     --color-1: #fb839e;
     --color-2: #ec9142;
-    --color-3: #1fc586;
+    --color-3: #038b25;
     --color-4: #2eb1ed;
     --color-5: #cc3a3b;
 
@@ -54,6 +52,23 @@ html {
     font-size: 62.5%;
     line-height: 1.5;
     scroll-behavior: smooth
+}
+
+/* override custom css variable for dark theme */
+body.dark {
+    --bg-black-900: #fff;
+    --bg-black-100: #353535;
+    --bg-black-50: #2b2c2f;
+    --bg-opacity: rgba(43, 44, 47, 0.5);
+
+    --text-black-900: #fff;
+    --text-black-700: #999;
+    --text-black-600: #bbb;
+
+    --outer-shadow: 3px 3px 3px #222327, -3px -3px 3px #363636;
+    --outer-shadow-0: 0 0 0 #222327, 0 0 0 #363636;
+    --inner-shadow: inset 3px 3px 3px #222327, inset -3px -3px 3px #363636;
+    --inner-shadow-0: inset 0 0 0 #222327, inset 0 0 0 #363636;
 }
 
 body {
@@ -211,7 +226,7 @@ a {
     width: 180px;
     height: 180px;
 
-    border: 25px solid var(--effect-3);
+    border: 25px solid var(--skin-color);
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
@@ -295,7 +310,7 @@ a {
 
     opacity: 0.5;
 
-    border-top: 50px solid var(--effect-3);
+    border-top: 50px solid var(--skin-color);
     border-bottom: 50px solid var(--effect-6);
     border-left: 50px solid var(--effect-1);
     border-right: 50px solid var(--effect-2);
@@ -319,7 +334,7 @@ a {
     width: 100%;
     height: 100%;
 
-    background: var(--effect-7);
+    background: var(--skin-color);
 
     animation: pulseBorder 1.5s ease-out infinite;
     -webkit-animation: pulseBorder 1.5s ease-out infinite;
@@ -671,7 +686,7 @@ a {
     font-weight: 600;
     text-transform: capitalize;
 
-    color: var(--text-black-700);
+    color: var(--text-black-600);
     padding: 10px 30px;
 
     border-radius: 30px;
@@ -749,13 +764,16 @@ a {
     font-weight: 700;
 }
 
+.home-section .home-text h2 span {
+    color: var(--skin-color);
+}
+
 .home-section .home-text h1 {
     margin: 0;
 
     font-size: 20px;
     font-weight: 600;
 
-    color: var(--text-black-700);
     text-transform: capitalize;
 }
 
