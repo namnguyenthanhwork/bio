@@ -24,11 +24,14 @@
     <!-- Main CSS -->
     <link rel="stylesheet" href="./lib/loader-page/loader.css">
     <link rel="stylesheet" href="./css/style.css">
+
+    <!-- Reponsive -->
     <link rel="stylesheet" href="./css/grid.css">
     <link rel="stylesheet" href="./css/responsive.css">
 
     <!-- Default skin color -->
-    <link rel="stylesheet" href="./css/skins/color-1.css">
+    <link rel="stylesheet" href="./css/skins/color-2.css">
+
     <!-- Switcher skin color -->
     <link rel="stylesheet" class="alternate-style" title="color-2" href="./css/skins/color-2.css" disabled>
     <link rel="stylesheet" class="alternate-style" title="color-3" href="./css/skins/color-3.css" disabled>
@@ -129,17 +132,17 @@
             <div class="effect effect-6"></div>
             <div class="effect effect-7"></div>
         </div>
-
         <!-- Effect wrap end -->
+
         <div class="container">
             <div class="row full-screen align-items-center">
-                <div class="home-text">
+                <div class="home-text col l-6 ml-6 m-6 sm-12 s-12">
                     <p>Hello</p>
-                    <h2>I'm <span class="typing"></span></h2>
+                    <h2>I'm <span class="typing" id="color"></span></h2>
                     <h1>Web Designer & Developer</h1>
                     <a href="#about" class="link-item btn-1 outer-shadow hover-in-shadow">More About Me</a>
                 </div>
-                <div class="home-img">
+                <div class="home-img col l-6 ml-6 m-6 sm-12 s-12">
                     <div class="img-box inner-shadow">
                         <img src="./img/profile-avt.png" class="outer-shadow" alt="profile-avt">
                     </div>
@@ -153,13 +156,13 @@
     <section class="about-section section" id="about">
         <div class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title col l-12 ml-12 m-12 sm-12 s-12">
                     <h2 data-heading="main info">About Me</h2>
                 </div>
             </div>
             <div class="row">
                 <!-- About img start -->
-                <div class="about-img">
+                <div class="about-img col l-5 ml-5 m-5 sm-10 s-10">
                     <div class="img-box inner-shadow">
                         <img src="./img/profile-avt.png" class="outer-shadow" alt="profile-avt">
                     </div>
@@ -178,7 +181,7 @@
                 <!-- About img end -->
 
                 <!-- About info start -->
-                <div class="about-info">
+                <div class="about-info col l-7 ml-7 m-7 sm-12 s-12">
                     <div>
                         <p>Full name: </p>
                         <p class="typing-name"></p>
@@ -222,7 +225,7 @@
                     <div>
                         <p>Hobby: </p>
                         <p>Read comics, listen to music, watch films -
-                            youtube, road tripping, play badminton, flying planes, learning
+                            youtube, road tripping, play badminton, game, learning
                             to code</p>
                     </div>
                     <div>
@@ -233,15 +236,17 @@
                         <p>Living at: </p>
                         <p>Ho Chi Minh City</p>
                     </div>
-                    <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
-                    <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                    <div>
+                        <a href="cv.pdf" class="btn-1 outer-shadow hover-in-shadow">Download CV</a>
+                        <a href="#contact" class="link-item btn-1 outer-shadow hover-in-shadow">Hire Me</a>
+                    </div>
                 </div>
                 <!-- About info end -->
             </div>
 
             <!-- About tabs start -->
             <div class="row">
-                <div class="about-tabs">
+                <div class="about-tabs col l-12 ml-12 m-12 sm-12 s-12">
                     <span class="tab-item active outer-shadow hover-in-shadow" data-target=".skills">Skills</span>
                     <span class="tab-item hover-in-shadow" data-target=".experience">Experience</span>
                     <span class="tab-item hover-in-shadow" data-target=".education">Education</span>
@@ -251,7 +256,7 @@
 
             <!-- Skills start -->
             <div class="row">
-                <div class="skills tab-content active">
+                <div class="skills tab-content active l-12 ml-12 m-12 sm-12 s-12">
                     <div class="row justify-content-center">
                         <div class="skill-item col l-4 ml-6 m-6 sm-12 s-12">
                             <p><span>Language:</span><span>HTML, CSS, JS, JAVA, C++</span></p>
@@ -267,10 +272,10 @@
             <div class="row">
                 <div class="experience tab-content">
                     <div class="row">
-                        <div class="timeline">
+                        <div class="timeline col l-12 ml-12 m-12 sm-12 s-12">
                             <div class="row">
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-briefcase icon"></i>
                                         <span>Sep, 2018 - present</span>
@@ -285,7 +290,7 @@
                                 <!-- Timeline item end -->
 
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-briefcase icon"></i>
                                         <span>Sep, 2018 - present</span>
@@ -300,7 +305,7 @@
                                 <!-- Timeline item end -->
 
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-briefcase icon"></i>
                                         <span>Sep, 2018 - present</span>
@@ -324,10 +329,10 @@
             <div class="row">
                 <div class="education tab-content">
                     <div class="row">
-                        <div class="timeline">
+                        <div class="timeline col l-12 ml-12 m-12 sm-12 s-12">
                             <div class="row">
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-graduation-cap icon"></i>
                                         <span>2019 - present</span>
@@ -342,7 +347,7 @@
                                 <!-- Timeline item end -->
 
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-graduation-cap icon"></i>
                                         <span>2016 - 2019</span>
@@ -357,7 +362,7 @@
                                 <!-- Timeline item end -->
 
                                 <!-- Timeline item start -->
-                                <div class="timeline-item">
+                                <div class="timeline-item col l-12 ml-12 m-12 sm-12 s-12">
                                     <div class="timeline-item-inner outer-shadow">
                                         <i class="fas fa-graduation-cap icon"></i>
                                         <span>2012 - 2016</span>
@@ -384,13 +389,13 @@
     <section class="service-section section" id="services">
         <div class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title col l-12 ml-12 m-12 sm-12 s-12">
                     <h2 data-heading="Services">What i do</h2>
                 </div>
             </div>
             <div class="row">
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-mobile-alt"></i>
@@ -404,7 +409,7 @@
                 <!-- Services item end -->
 
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-laptop-code"></i>
@@ -418,7 +423,7 @@
                 <!-- Services item end -->
 
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-palette"></i>
@@ -432,7 +437,7 @@
                 <!-- Services item end -->
 
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-code"></i>
@@ -446,7 +451,7 @@
                 <!-- Services item end -->
 
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-search"></i>
@@ -460,7 +465,7 @@
                 <!-- Services item end -->
 
                 <!-- Services item start -->
-                <div class="service-item">
+                <div class="service-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="service-item-inner outer-shadow">
                         <div class="icon inner-shadow">
                             <i class="fas fa-bullhorn"></i>
@@ -481,14 +486,14 @@
     <section class="portfolio-section section" id="portfolio">
         <div class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title col l-12 ml-12 m-12 sm-12 s-12">
                     <h2 data-heading="Portfolio">Lastest Works</h2>
                 </div>
             </div>
 
             <!-- Portfolio filter start -->
             <div class="row">
-                <div class="portfolio-filter">
+                <div class="portfolio-filter col l-12 ml-12 m-12 sm-12 s-12">
                     <span class="filter-item hover-in-shadow outer-shadow active" data-target="all">All</span>
                     <span class="filter-item hover-in-shadow" data-target="web-application">Web Application</span>
                     <span class="filter-item hover-in-shadow" data-target="photoshop">Photoshop</span>
@@ -501,7 +506,7 @@
             <!-- Portfolio items start -->
             <div class="row portfolio-items">
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="web-application">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="web-application">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-1.png" alt="project-1"
@@ -514,13 +519,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -537,7 +542,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="web-application">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="web-application">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-2.png" alt="project-2"
@@ -549,13 +554,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -572,7 +577,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="e-commerce">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="e-commerce">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-3.png" alt="project-3"
@@ -584,13 +589,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -607,7 +612,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="e-commerce">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="e-commerce">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-4.png" alt="project-4"
@@ -619,13 +624,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -642,7 +647,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="web-application">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="web-application">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-5.png" alt="project-5"
@@ -654,13 +659,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -677,7 +682,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="web-application">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="web-application">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-6.png" alt="project-6"
@@ -689,13 +694,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -712,7 +717,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="mobile-app">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="mobile-app">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-7.png" alt="project-7"
@@ -724,13 +729,13 @@
                         <!-- Portfolio item details start -->
                         <div class="portfolio-item-details">
                             <div class="row">
-                                <div class="description">
+                                <div class="description col l-8 ml-8 m-8 sm-12 s-12">
                                     <h3>Project Brief:</h3>
                                     <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Blanditiis corporis
                                         suscipit, praesentium debitis eum saepe fugiat dolores quas nam repellendus, non
                                         reprehenderit rem impedit facere alias soluta eligendi temporibus illo?</p>
                                 </div>
-                                <div class="info">
+                                <div class="info col l-4 ml-4 m-4 sm-12 s-12">
                                     <h3>Project info</h3>
                                     <ul>
                                         <li>Date - <span>2020</span></li>
@@ -748,7 +753,7 @@
                 <!-- Portfolio item end -->
 
                 <!-- Portfolio item start -->
-                <div class="portfolio-item" data-category="photoshop">
+                <div class="portfolio-item col l-4 ml-4 m-6 sm-12 s-12" data-category="photoshop">
                     <div class="portfolio-item-inner outer-shadow">
                         <div class="portfolio-item-img">
                             <img src="./img/portfolio/thumb/project-8.png" alt="project-8"
@@ -806,7 +811,7 @@
     <section class="testimonial-section section" id="testimonial">
         <div class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title col l-12 ml-12 m-12 sm-12 s-12">
                     <h2 data-heading="Testimonial">Client Speak</h2>
                 </div>
             </div>
@@ -867,13 +872,13 @@
     <section class="contact-section section" id="contact">
         <div class="container">
             <div class="row">
-                <div class="section-title">
+                <div class="section-title col l-12 ml-12 m-12 sm-12 s-12">
                     <h2 data-heading="contact">Get In Touch</h2>
                 </div>
             </div>
-            <div class="row">
+            <div class="row justify-content-center">
                 <!-- Contact item start -->
-                <div class="contact-item">
+                <div class="contact-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="contact-item-inner outer-shadow">
                         <i class="fas fa-phone"></i>
                         <span>Phone</span>
@@ -883,7 +888,7 @@
                 <!-- Contact item end -->
 
                 <!-- Contact item start -->
-                <div class="contact-item">
+                <div class="contact-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="contact-item-inner outer-shadow">
                         <i class="fas fa-envelope"></i>
                         <span>Email</span>
@@ -893,7 +898,7 @@
                 <!-- Contact item end -->
 
                 <!-- Contact item start -->
-                <div class="contact-item">
+                <div class="contact-item col l-4 ml-4 m-6 sm-12 s-12">
                     <div class="contact-item-inner outer-shadow">
                         <i class="fas fa-map-marked-alt"></i>
                         <span>Address</span>
@@ -903,10 +908,10 @@
                 <!-- Contact item end -->
             </div>
             <div class="row">
-                <div class="contact-form">
+                <div class="contact-form col l-12 ml-12 m-12 sm-12 s-12">
                     <form action="#">
                         <div class="row">
-                            <div class="col l-6 ml-6 m-12 sm-12 s12">
+                            <div class="col l-6 ml-6 m-12 sm-12 s-12">
                                 <div class="input-group outer-shadow hover-in-shadow">
                                     <input type="text" placeholder="Name" class="input-control" required>
                                 </div>
@@ -917,7 +922,7 @@
                                     <input type="text" placeholder="Subject" class="input-control" required>
                                 </div>
                             </div>
-                            <div class="col l-6 ml-6 m-12 sm-12 s12">
+                            <div class="col l-6 ml-6 m-12 sm-12 s-12">
                                 <div class="input-group outer-shadow hover-in-shadow">
                                     <textarea name="" id="" cols="30" rows="10" class="input-control"
                                         placeholder="Message"></textarea>
@@ -925,7 +930,7 @@
                             </div>
                         </div>
                         <div class="row">
-                            <div class="submit-btn">
+                            <div class="submit-btn col l-12 ml-12 m-12 sm-12 s-12">
                                 <button type="submit" class="btn-1 outer-shadow hover-in-shadow">Send Message</button>
                             </div>
                         </div>
@@ -964,7 +969,7 @@
         <div class="loader-section section-right"></div>
     </div>
     <!-- Preloader end -->
-    
+
     <!-- All plugins -->
     <script src="https://kit.fontawesome.com/a076d05399.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/typed.js/2.0.11/typed.min.js"></script>

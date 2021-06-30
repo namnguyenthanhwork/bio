@@ -10,7 +10,7 @@ var cursors = [{
     element_activation: "0",
     selector_type: "tag",
     selector_data: "body",
-    color: "#f72c26",
+    color: "#cc3a3b",
     width: "30",
     blending_mode: "normal"
 }];
