@@ -49,12 +49,14 @@ var cursors = [{
                 // prevent default anchor click behavior
                 event.preventDefault();
                 const hash = event.target.hash;
+                /* uncomment if u use nav 1 section - comment line from 339 (comment if u scroll link with nav)
                 // deactivate existing active 'section'
                 document.querySelector(".section.active").classList.add("hide");
                 document.querySelector(".section.active").classList.remove("active");
                 // activate new 'section'
                 document.querySelector(hash).classList.add("active");
                 document.querySelector(hash).classList.remove("hide");
+                */
                 // deactivate existing active navigation menu 'link-item'
                 navMenu.querySelector(".active").classList.add("outer-shadow", "hover-in-shadow");
                 navMenu.querySelector(".active").classList.remove("active", "inner-shadow");
@@ -336,10 +338,10 @@ function bodyScrollingToggle() {
 })();
 
 /* --------------- hide all sections except active ------------ */
-(() => {
-    const sections = document.querySelectorAll(".section");
-    sections.forEach((section) => {
-        if (!section.classList.contains("active"))
-            section.classList.add("hide");
-    })
-})();
+// (() => {
+//     const sections = document.querySelectorAll(".section");
+//     sections.forEach((section) => {
+//         if (!section.classList.contains("active"))
+//             section.classList.add("hide");
+//     })
+// })();

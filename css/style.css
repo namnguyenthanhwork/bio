@@ -38,27 +38,6 @@
 /* -----------------
     Global style
 -------------------- */
-::-webkit-scrollbar {
-    width: 10px
-}
-
-::-webkit-scrollbar-track {
-    background: #fafafa
-}
-
-::-webkit-scrollbar-thumb {
-    background: var(--skin-color);
-    border-radius: 20px;
-    -webkit-border-radius: 20px;
-    -moz-border-radius: 20px;
-    -ms-border-radius: 20px;
-    -o-border-radius: 20px;
-}
-
-::-webkit-scrollbar-thumb:hover {
-    background: rgb(99, 99, 99)
-}
-
 * {
     box-sizing: border-box;
     margin: 0;
@@ -485,6 +464,7 @@ a {
 .section-title h2::before {
     content: attr(data-heading);
     display: block;
+
     font-size: 16px;
     font-weight: 600;
     color: var(--skin-color);
@@ -498,7 +478,9 @@ a {
     Header style
 -------------------- */
 .header {
-    position: absolute;
+    /* position: absolute;  link to 1 section  */
+    position: fixed;
+    /* scroll link */
     top: 0;
     left: 0;
     z-index: 99;
@@ -512,7 +494,7 @@ a {
     height: auto;
 }
 
-.header .logo img.un-active {
+.header .logo img.deactivate {
     display: none;
 }
 
@@ -604,9 +586,11 @@ a {
     position: fixed;
     top: 0;
     left: 0;
+    z-index: -1;
+
     width: 100%;
     height: 100%;
-    z-index: -1;
+
     visibility: hidden;
     background: var(--bg-black-50);
 }
@@ -614,6 +598,7 @@ a {
 .fade-out-effect.active {
     visibility: visible;
     z-index: 1000;
+
     animation: fadeOut 0.3s ease-out;
     -webkit-animation: fadeOut 0.3s ease-out;
 }
@@ -632,6 +617,7 @@ a {
     visibility: visible;
     opacity: 1;
     z-index: 999;
+
     transition: all 0.3s ease-in;
     -webkit-transition: all 0.3s ease-in;
     -moz-transition: all 0.3s ease-in;
@@ -643,11 +629,10 @@ a {
     display: block;
     width: 40px;
     height: 40px;
+    line-height: 35px;
 
     font-size: 35px;
-    line-height: 35px;
     text-align: center;
-
     cursor: pointer;
 
     position: absolute;
@@ -659,7 +644,6 @@ a {
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
-
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -676,7 +660,7 @@ a {
 }
 
 .nav-menu-inner {
-    min-height: 100vh;
+    height: 100%;
 
     display: flex;
     align-items: center;
@@ -825,6 +809,7 @@ a {
     About section style
 -------------------------- */
 .about-section {
+    position: relative;
     padding: 80px 0;
     min-height: 100vh;
 }
@@ -1741,12 +1726,14 @@ a {
 .testimonial-section .testi-box {
     width: 100%;
     max-width: 600px;
+
     margin: auto;
     padding: 0 15px;
 }
 
 .testimonial-section .testi-slider {
     overflow: hidden;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1757,6 +1744,7 @@ a {
 .testimonial-section .testi-slider-container {
     display: flex;
     align-items: center;
+
     transition: margin 1s ease;
     -webkit-transition: margin 1s ease;
     -moz-transition: margin 1s ease;
@@ -1765,9 +1753,9 @@ a {
 }
 
 .testimonial-section .testi-item {
+    position: relative;
     padding: 30px;
     text-align: center;
-    position: relative;
 }
 
 .testimonial-section .testi-item i {
@@ -1792,14 +1780,15 @@ a {
 }
 
 .testimonial-section .testi-item img {
-    max-width: 70px;
     display: inline-block;
+    max-width: 70px;
     width: 100%;
 }
 
 .testimonial-section .testi-item span {
     display: block;
     margin: 10px 0 0;
+
     font-weight: 600;
     color: var(--text-black-700);
 }
@@ -1810,23 +1799,27 @@ a {
 }
 
 .testimonial-section .testi-slider-nav span {
+    display: inline-block;
     width: 40px;
     height: 40px;
+
     color: var(--skin-color);
-    display: inline-block;
     font-size: 20px;
-    margin: 0 4px;
     cursor: pointer;
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+
+    margin: 0 4px;
+
     border-radius: 50%;
     -webkit-border-radius: 50%;
     -moz-border-radius: 50%;
     -ms-border-radius: 50%;
     -o-border-radius: 50%;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
 
 .testimonial-section .testi-slider-nav span::after {
@@ -1850,14 +1843,16 @@ a {
 }
 
 .contact-section .contact-item {
-    padding: 15px;
     display: flex;
+    padding: 15px;
 }
 
 .contact-section .contact-item-inner {
     width: 100%;
+
     padding: 30px 15px;
     text-align: center;
+
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1872,9 +1867,10 @@ a {
 
 .contact-section .contact-item-inner span {
     display: block;
+    margin: 15px 0 10px;
+
     font-weight: 600;
     color: var(--text-black-700);
-    margin: 15px 0 10px;
     text-transform: capitalize;
 }
 
@@ -1889,11 +1885,13 @@ a {
 
 .contact-section .input-group {
     margin: 0 0 25px;
+
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
     -ms-border-radius: 30px;
     -o-border-radius: 30px;
+
     transition: all 0.3s ease;
     -webkit-transition: all 0.3s ease;
     -moz-transition: all 0.3s ease;
@@ -1913,11 +1911,15 @@ a {
     display: block;
     height: 45px;
     width: 100%;
-    padding: 0 20px;
-    color: var(--text-black-700);
+
     border: none;
     outline: none;
+
+    padding: 0 20px;
+
+    color: var(--text-black-700);
     background: transparent;
+
     border-radius: 30px;
     -webkit-border-radius: 30px;
     -moz-border-radius: 30px;
