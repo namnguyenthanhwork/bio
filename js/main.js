@@ -1,21 +1,3 @@
-// $(document).ready(function () {
-//     // scroll back
-//     $(window).scroll(function () {
-//         // active & un active logo nav left
-//         if (this.scrollY > 30) {
-//             $(".logo img:first-child").addClass("un-active"),
-//                 $(".logo img:first-child").removeClass("active"),
-//                 $(".logo img:last-child").addClass("active"),
-//                 $(".logo img:last-child").removeClass("un-active");
-//         } else {
-//             $(".logo img:first-child").addClass("active"),
-//                 $(".logo img:first-child").removeClass("un-active"),
-//                 $(".logo img:last-child").addClass("un-active"),
-//                 $(".logo img:last-child").removeClass("active");
-//         }
-//     })
-// });
-
 // init cursor
 var cursors = [{
     cursor_id: "3",
@@ -141,6 +123,7 @@ function renderTime() {
 window.onload = (event) => {
     renderTime();
 };
+document.body.onload(document.body.classList.add("loaded"));
 
 // click about-tabs
 (() => {
