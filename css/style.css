@@ -75,11 +75,12 @@ body {
     overflow-x: hidden;
     color: var(--text-black-600);
     background-color: var(--bg-black-50);
-    transition: all 0.3s ease;
-    -webkit-transition: all 0.3s ease;
-    -moz-transition: all 0.3s ease;
-    -ms-transition: all 0.3s ease;
-    -o-transition: all 0.3s ease;
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
 }
 
 body.hidden-scrolling {
@@ -217,15 +218,24 @@ a {
     Header style
 -------------------- */
 .header {
-    /* position: absolute;  link to 1 section  */
+    /*position: absolute;
+    linkto1section*/
     position: fixed;
-    /* scroll link */
+    /*scrolllink*/
     top: 0;
     left: 0;
     z-index: 99;
 
     width: 100%;
     padding: 20px 15px;
+
+    background: var(--bg-black-50);
+
+    transition: all 0.2s linear;
+    -webkit-transition: all 0.2s linear;
+    -moz-transition: all 0.2s linear;
+    -ms-transition: all 0.2s linear;
+    -o-transition: all 0.2s linear;
 }
 
 .header .logo img {
