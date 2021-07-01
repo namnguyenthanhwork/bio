@@ -1137,6 +1137,7 @@ a {
 .portfolio-section .portfolio-item-inner p {
     margin: 10px 0 0;
     text-transform: capitalize;
+    text-align: center;
 }
 
 /* -----------------------
@@ -1617,14 +1618,28 @@ a {
 .contact-section .contact-item {
     display: flex;
     padding: 15px;
+    color: var(--text-black-600);
 }
 
 .contact-section .contact-item-inner {
     width: 100%;
-
     padding: 30px 15px;
     text-align: center;
 
+    border-radius: 10px;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    -ms-border-radius: 10px;
+    -o-border-radius: 10px;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.contact-section .contact-item-inner::after {
     border-radius: 10px;
     -webkit-border-radius: 10px;
     -moz-border-radius: 10px;
@@ -1644,6 +1659,16 @@ a {
     font-weight: 600;
     color: var(--text-black-700);
     text-transform: capitalize;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.contact-section .contact-item-inner:hover span {
+    color: var(--skin-color);
 }
 
 .contact-section .contact-item-inner p {
