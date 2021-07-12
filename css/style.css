@@ -1,13 +1,14 @@
 /* Font */
 @import url(https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;600;700&display=swap);
+@import url('https://fonts.googleapis.com/css2?family=Yomogi&display=swap');
 
 /* define custom css variables */
 :root {
-    --color-1: #fb839e;
+    --color-1: #fd456f;
     --color-2: #ec9142;
-    --color-3: #038b25;
+    --color-3: #0bd53e;
     --color-4: #2eb1ed;
-    --color-5: #cc3a3b;
+    --color-5: #ff5f36;
 
     --bg-black-900: #000;
     --bg-black-100: #ddd;
@@ -44,7 +45,9 @@
 }
 
 *:not(i) {
-    font-family: "Open Sans", sans-serif;
+    /* font-family: "Open Sans", sans-serif; */
+    font-family: 'Yomogi', cursive;
+    font-weight: bold;
 }
 
 html {
@@ -634,7 +637,7 @@ a {
 
 .about-section .about-info div>p:first-child {
     color: var(--skin-color);
-    min-width: 125px
+    min-width: 140px
 }
 
 .about-section .about-info p span {
@@ -726,7 +729,7 @@ a {
 
 .about-section .skill-item div p:first-child {
     display: inline-block;
-    min-width: 140px;
+    min-width: 155px;
     color: var(--skin-color);
 }
 

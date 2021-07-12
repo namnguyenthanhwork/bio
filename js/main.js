@@ -2,7 +2,7 @@
 var cursors = [{
     cursor_id: "3",
     cursor_type: "0",
-    cursor_shape: "12",
+    cursor_shape: "15",
     cursor_image: "",
     default_cursor: "auto",
     hover_effect: "plugin",
