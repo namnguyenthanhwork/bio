@@ -1733,3 +1733,21 @@ a {
 .contact-section .submit-btn {
     text-align: center;
 }
+
+/* ---------------
+    Footer style
+------------------ */
+footer p {
+    text-align: center;
+    padding: 30px 0;
+}
+
+footer p i {
+    color: #fd4040;
+}
+
+footer p a {
+    color: var(--skin-color);
+    font-weight: bold;
+    text-transform: capitalize;
+}
