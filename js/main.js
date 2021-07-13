@@ -129,31 +129,93 @@ new Typed(".typing-name", {
     backSpeed: 60,
     loop: !0
 });
+
 // load real time
-function renderTime() {
-    var e = new Date,
-        t = new Date("2001-01-16"),
-        n = e.getTime() - t.getTime(),
-        o = new Date(n),
-        a = o.getFullYear() - 1970,
-        l = o.getMonth(),
-        s = o.getDate(),
-        r = o.getHours(),
-        c = o.getMinutes(),
-        i = o.getSeconds();
-    24 == r ? r = 0 : r > 12 && (r -= 0), r < 10 && (r = "0" + r), c < 10 && (c = "0" + c), i < 10 && (i = "0" + i);
-    var d = document.getElementById("years"),
-        u = document.getElementById("months"),
-        m = document.getElementById("days"),
-        y = document.getElementById("hours"),
-        g = document.getElementById("minutes"),
-        p = document.getElementById("seconds");
-    d.innerText = a, u.innerText = l, m.innerText = s, y.innerText = r, g.innerText = c, p.innerText = i, d.style.color = "#ed4747", u.style.color = "#ed4747", m.style.color = "#ed4747", y.style.color = "#0099ff", g.style.color = "#0099ff", p.style.color = "#0099ff", setTimeout("renderTime()", 1e3)
-}
-window.onload = (event) => {
-    renderTime();
+function getAmoDate(day, month, year) {
+    let amountDay = 0;
+    const leap = new Date(year, 1, 29).getDate() === 29;
+    switch (month) {
+        case 1:
+        case 3:
+        case 5:
+        case 7:
+        case 8:
+        case 10:
+        case 12:
+            amountDay = 31;
+            break;
+        case 4:
+        case 6:
+        case 9:
+        case 11:
+            amountDay = 30;
+            break;
+        default:
+            amountDay = leap ? 29 : 28;
+            break;
+    };
+    return amountDay - day;
 };
-document.body.onload(document.body.classList.add("loaded"));
+
+function renderTime() {
+    var myBD = new Date("01/16/2001"),
+        currentDate = new Date();
+    let hours = currentDate.getHours(),
+        mins = currentDate.getMinutes(),
+        sec = currentDate.getSeconds();
+
+    myDay = Number.parseInt(myBD.getDate());
+    myMonth = Number.parseInt(myBD.getMonth() + 1);
+    myYear = Number.parseInt(myBD.getFullYear());
+
+    currentDay = Number.parseInt(currentDate.getDate());
+    currentMonth = Number.parseInt(currentDate.getMonth() + 1);
+    currentYear = Number.parseInt(currentDate.getFullYear());
+
+    diffDay = 0;
+    diffMonth = 0;
+    diffYear = 0;
+
+    diffDay += getAmoDate(myDay, myMonth, myYear) + currentDay;
+
+    if (++myMonth <= 12)
+        diffMonth += 12 - myMonth + 1;
+    if (--currentMonth >= 1)
+        diffMonth += currentMonth;
+    while (++myYear <= currentYear - 1)
+        diffYear++;
+
+    diffMonth += diffDay / 31;
+    diffDay %= 31;
+    diffYear += diffMonth / 12;
+    diffMonth %= 12;
+
+    diffYear = Math.floor(diffYear);
+    diffMonth = Math.floor(diffMonth);
+
+    24 == hours ? hours = 0 : hours > 12 && (hours -= 0),
+        hours < 10 && (hours = "0" + hours),
+        mins < 10 && (mins = "0" + mins), sec < 10 && (sec = "0" + sec);
+
+    var yearInner = document.getElementById("years"),
+        monthInner = document.getElementById("months"),
+        dayInner = document.getElementById("days"),
+        hourInner = document.getElementById("hours"),
+        minInner = document.getElementById("minutes"),
+        secInner = document.getElementById("seconds");
+
+    yearInner.innerText = diffYear, monthInner.innerText = diffMonth, dayInner.innerText = diffDay,
+        hourInner.innerText = hours, minInner.innerText = mins, secInner.innerText = sec,
+        yearInner.style.color = "#ed4747", monthInner.style.color = "#ed4747", dayInner.style.color = "#ed4747",
+        hourInner.style.color = "#0099ff", minInner.style.color = "#0099ff", secInner.style.color = "#0099ff";
+    setTimeout("renderTime()", 1e3)
+}
+
+// preload page
+window.addEventListener("load", () => {
+    renderTime();
+    document.body.classList.add("loaded");
+});
 
 // click about-tabs
 (() => {

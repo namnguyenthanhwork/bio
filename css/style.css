@@ -652,6 +652,15 @@ a {
 .about-section .about-info a.girl-friend {
     color: var(--skin-color);
     font-weight: bold;
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
+}
+
+.about-section .about-info a.girl-friend:hover {
+    color: #e0d320;
 }
 
 .about-section .about-info .btn-1 {
@@ -1746,8 +1755,18 @@ footer p i {
     color: #fd4040;
 }
 
-footer p a {
+a.copyright:hover {
     color: var(--skin-color);
+}
+
+a.copyright {
+    color: #e0d320;
     font-weight: bold;
     text-transform: capitalize;
+
+    transition: all 0.3s ease;
+    -webkit-transition: all 0.3s ease;
+    -moz-transition: all 0.3s ease;
+    -ms-transition: all 0.3s ease;
+    -o-transition: all 0.3s ease;
 }
