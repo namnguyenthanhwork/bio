@@ -210,10 +210,9 @@ function renderTime() {
         hourInner.style.color = "#0099ff", minInner.style.color = "#0099ff", secInner.style.color = "#0099ff";
     setTimeout("renderTime()", 1e3)
 }
-
+renderTime();
 // preload page
 window.addEventListener("load", () => {
-    renderTime();
     document.body.classList.add("loaded");
 });
 

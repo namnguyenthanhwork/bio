@@ -77,3 +77,16 @@ function updateIconAndLogo() {
         dayNightLogo.querySelector("img:last-child").classList.add("deactivate");
     }
 }
+
+/* ------------------ toggle music --------------- */
+const music = document.querySelector(".music");
+const audio = document.getElementById("myAudio");
+
+music.addEventListener("click", function () {
+    if (this.classList.contains("pause")) {
+        document.getElementById("myAudio").play();
+    } else {
+        document.getElementById("myAudio").pause();
+    }
+    this.classList.toggle("pause");
+});
