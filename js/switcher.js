@@ -80,13 +80,13 @@ function updateIconAndLogo() {
 
 /* ------------------ toggle music --------------- */
 const music = document.querySelector(".music");
-const audio = document.getElementById("myAudio");
-
+let audio = document.getElementById("myAudio");
+alert("Nhớ bật nhạc ở góc phải để chill nhó - 💕 Thành Nam 💕")
 music.addEventListener("click", function () {
     if (this.classList.contains("pause")) {
-        document.getElementById("myAudio").play();
+        audio.play();
     } else {
-        document.getElementById("myAudio").pause();
+        audio.pause();
     }
     this.classList.toggle("pause");
 });
