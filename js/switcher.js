@@ -90,3 +90,8 @@ music.addEventListener("click", function () {
     }
     this.classList.toggle("pause");
 });
+
+window.addEventListener("load", () => {
+    audio.pause();
+    music.classList.add("pause");
+});
