@@ -99,6 +99,7 @@ function scrollActive() {
             document.querySelector('.nav-menu-inner a[href*=' + sectionId + ']').classList.add('active', 'inner-shadow');
         } else {
             document.querySelector('.nav-menu-inner a[href*=' + sectionId + ']').classList.remove('active', 'inner-shadow');
+            document.querySelector('.nav-menu-inner a[href*=' + sectionId + ']').classList.add('outer-shadow');
         }
     })
 }

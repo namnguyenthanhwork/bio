@@ -81,6 +81,11 @@ function updateIconAndLogo() {
 /* ------------------ toggle music --------------- */
 const music = document.querySelector(".music");
 let audio = document.getElementById("myAudio");
+window.addEventListener("load", () => {
+    audio.pause();
+    music.classList.add("pause");
+});
+
 alert("Nhớ bật nhạc ở góc phải để chill nhó - 💕 Thành Nam 💕")
 music.addEventListener("click", function () {
     if (this.classList.contains("pause")) {
@@ -89,9 +94,4 @@ music.addEventListener("click", function () {
         audio.pause();
     }
     this.classList.toggle("pause");
-});
-
-window.addEventListener("load", () => {
-    audio.pause();
-    music.classList.add("pause");
 });
