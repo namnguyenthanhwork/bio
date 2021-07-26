@@ -224,20 +224,15 @@ a {
 
 .progress-container {
     background-color: rgba(150, 150, 150, 0.6);
-    height: 6px;
+    height: 7px;
     width: 100%;
 }
 
 .progress-bar {
     background-color: #d63230;
     background-image: linear-gradient(319deg, #d63230 0%, #f39237 37%, #97cc04 100%);
-    height: 6px;
+    height: 7px;
     width: 0%;
-    border-radius: 0 10px 10px 0;
-    -webkit-border-radius: 0 10px 10px 0;
-    -moz-border-radius: 0 10px 10px 0;
-    -ms-border-radius: 0 10px 10px 0;
-    -o-border-radius: 0 10px 10px 0;
 }
 
 /* -----------------
