@@ -85,8 +85,6 @@ window.addEventListener("load", () => {
     audio.pause();
     music.classList.add("pause");
 });
-
-alert("Nhớ bật nhạc ở góc phải để chill nhó - 💕 Thành Nam 💕")
 music.addEventListener("click", function () {
     if (this.classList.contains("pause")) {
         audio.play();
